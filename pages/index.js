@@ -1,8 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import {mergeSort} from "../pages/merge-sort/merge-sort"
 
 export default function Home() {
+  const getSorted = () => {
+let x = [12,16,3,6,5,1]
+console.log(mergeSort(x))
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -49,6 +54,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
+          <button onClick={getSorted}>click</button>
         </div>
       </main>
 
